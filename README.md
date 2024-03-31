@@ -13,7 +13,7 @@ pip install nbformat
 python3 md2nb.py [-h] <input_file> <output_file>
 ```
 **positional arguments:**
-  * `input_file`:path to .md file to be parsed
+  * `input_file`: path to .md file to be parsed
   * `output_file`: path to save .ipynb file
 
 **Options:**
@@ -23,5 +23,5 @@ python3 md2nb.py [-h] <input_file> <output_file>
 ```
 $ python3 md2nb.py classwork17.md classwork17.ipynb
 
-> Conversion Successful! Jupyter Notebook saved to classwork15.ipynb
+> Conversion Successful! Jupyter Notebook saved to classwork17.ipynb
 ```

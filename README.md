@@ -1,7 +1,7 @@
 # md2nb
-Script to parse headers and ordered lists from Markdown files into separate Jupyter Notebook markdown cells.
+Script to parse headers and ordered lists from Markdown files into Jupyter Notebook markdown cells.
 
-Used to quickly convert for COMP162 classwork assignments in markdown to .ipynb
+Mainly used to parse and convert COMP162 classwork markdown files to .ipynb
 
 ## Pre-requisites
 ```

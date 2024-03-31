@@ -88,5 +88,8 @@ if __name__ == '__main__':
     if not os.path.exists(args.input_file):
         print(f'\nERROR: Could not find markdown file in "{args.input_file}"')
         sys.exit()
+    elif not args.input_file.endswith('.md'):
+        print(f'\nERROR: input file "{args.input_file}" is not a markdown file')
+        sys.exit()
 
     md2nb(input_file=args.input_file, output_file=args.output_file)

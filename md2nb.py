@@ -1,5 +1,7 @@
 # parse.py: Parse markdown sections into jupyter notebook
 import re
+import os
+import sys
 import nbformat
 import argparse
 
@@ -71,7 +73,7 @@ def md2nb(input_file: str, output_file: str):
     with open(output_file, 'w') as f:
         nbformat.write(notebook, f)
         
-    print(f"Conversion Successful! Jupyter Notebook saved to {output_file}")
+    print(f'\nConversion Successful! Jupyter Notebook saved to "{output_file}"')
 
 
 if __name__ == '__main__':
@@ -82,5 +84,9 @@ if __name__ == '__main__':
     parser.add_argument('input_file', type=str, help='path to .md file to be parsed')
     parser.add_argument('output_file', type=str, help='path to save .ipynb file')
     args = parser.parse_args()
+
+    if not os.path.exists(args.input_file):
+        print(f'\nERROR: Could not find markdown file in "{args.input_file}"')
+        sys.exit()
 
     md2nb(input_file=args.input_file, output_file=args.output_file)
